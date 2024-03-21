@@ -37,8 +37,21 @@ class ThirdScreen(Screen):
         self.add_widget(btn)
         
     def next(self):
+        self.manager.transition.direction = "right"
+        self.manager.current = "fourth"
+
+
+class FourthScreen(Screen):
+    def __init__(self, name ='fourth'):
+        super().__init__(name = name)
+        btn = Button(text = "Fourth button!")
+        btn.on_press = self.next 
+        self.add_widget(btn)
+    
+    def next(self):
         self.manager.transition.direction = "down"
         self.manager.current = "first"
+
 
 class MyApp(App):
     def build(self):
@@ -46,6 +59,7 @@ class MyApp(App):
             sm.add_widget(FirstScreen())
             sm.add_widget(SecondScreen())
             sm.add_widget(ThirdScreen())
+            sm.add_widget(FourthScreen())
             return sm
 
 
