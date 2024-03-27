@@ -1,0 +1,32 @@
+<MenuScreen>:
+    canvas.before:
+        Color:
+            rgba: 1,1,0,1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+        
+    BoxLayout:
+        orientation: 'vertical'
+        padding: '20dp'
+        spacing: '20dp'
+
+        Label: 
+            id: title_game
+            text: 'Cosmos Adventure'
+            font_name: 'assets/RubikScribble-Regular'
+            font_size: '30dp'
+            size_hight_y: .2
+            color: "#9BD770"
+        Image:
+            source: 'assets/leaf-8323899_1280'
+            size_hight_y:.3
+            allow_stretch: True
+        
+        Button:
+            text: "text"
+            color: "#543L32"
+            backgroung_color: '#f11111'
+
+
+            
